@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #426696;
+    font-weight: 600;
+    font-size: 3rem;
+    opacity: 0.8;
+}
+
+h3 {
+    color: #426696;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+h2, p {
+    color: #658ec6;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+main {
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* gives a minimum height to the main class, and give a linear effects from left bottom to right top */
+/* using flex, and put the main class object in the middle for row and column */
+
+
+.glass {
+    background: white;
+    min-height: 80vh;
+    width: 60%;
+
+    background: linear-gradient(
+        to right bottom,
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.3)
+    );
+
+    border-radius: 2rem;
+    z-index: 2;
+    backdrop-filter: blur(2rem);
+
+    display:flex;
+}
+
+/* a linear-gradient with 70% transparent  to right bottom with 30% transparent, and make corners a bit round */
+/* the object with bigger z-index stay front, the one with smaller z-index stay behind */
+
+/* The backdrop-filter is used to apply filter effects
+(grayscale, contrast, blur, etc) to the background/backdrop of an element. */
+
+.circle1,
+.circle2 {
+    background: white;
+    background: linear-gradient(
+        to right bottom,
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.3)
+    );
+    height: 20rem;
+    width: 20rem;
+    position: absolute;
+    border-radius: 50%;
+}
+
+/* 50% of border-radius make two circle div into actual circle */
+
+.circle1 {
+    top: 5%;
+    right: 15%;
+}
+
+.circle2 {
+    bottom: 5%;
+    left: 10%;
+}
+
+.dashboard {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    /* "display: flex" here activate the flex layout,
+    and "flex-direction: column" make sure the divs are placed as column*/
+
+    align-items: center;
+    /* put every div center vertically  */
+    justify-content: space-evenly;
+    /* there are three divs under dashboard, "user", "links" and "pro"
+     "justify-content: space-evenly;" makes these three divs places in same distances to each others */
+    text-align: center;
+    /* makes all the h2/h3/p centered */
+
+    background: linear-gradient(
+        to right bottom,
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.3)
+    );
+    /* similar to the dashboard div, linear-gradient effects */
+    border-radius: 2rem;
+}
+
+.link {
+    display: flex;
+    margin: 2rem 0rem;
+    padding: 1rem 5rem;
+    align-items: center;
+    /* Items are positioned at the center of the container */
+}
+
+.link h2{
+    padding: 0rem 2rem;
+}
+
+/* .dashboard has flex:1; and .games has flex:2;
+ so .dashboard shares 1/3 of the div, and .games shares the 2/3 of the div */
+
+.pro {
+    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+    border-radius: 2rem;
+    color: white;
+    padding: 1rem;
+    position: relative;
+}
+
+.pro img{
+    position: absolute;
+    top: -10%;
+    right: 10%;
+}
+
+.pro h2{
+    width: 40%;
+    color: white;
+    font-weight: 600;
+}
+
+/* Games section start here */
+.games {
+    flex: 2;
+}
+
+.status {
+    margin-bottom: 3rem;
+}
+
+.status input {
+    background: linear-gradient(
+        to right bottom,
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.3)
+    );
+
+    border: none;
+    width: 50%;
+    border-radius: 2rem;
+    /* styling the input tag */
+}
+
+.games {
+    margin: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.card {
+    display: flex;
+    background: linear-gradient(
+        to left top,
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.5)
+    );
+    border-radius: 1rem;
+    margin: 2rem 0rem;
+    padding: 2rem;
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+    /* two of the 6px represents the y and x, and 20px represents the amount of blur */
+    justify-content: space-between;
+    /* it makes the first item placed at the front, the last one placed at the end
+    others shares equal distances to each others */
+
+}
+
+.progress {
+    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+    width: 100%;
+    height: 25%;
+    border-radius: 1rem;
+    /* styling of the progress bar itself
+     but without the ".progress::after", all progress bar will display as 100%
+     because these are just div with width,height and color */
+    position: relative;
+    overflow: hidden;
+    /* anything exceeds the progress bar div will be hidden */
+}
+
+.progress::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgb(236, 236, 236);
+    position: absolute;
+    left: 60%;
+}
+/* put extra content after the previous progress bar, makes it looks 60%
+ the progress bar itself is relative position, but the new part is absolute position inside the progress bar*/
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.percentage {
+    font-weight: bold;
+    /* make the percentage text bold */
+    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+    /* make the background of the text linear-gradient
+    note: not the text, so without the styling below it looks strange */
+    -webkit-background-clip: text;
+    /* cut the background color except the text area, but the text has its own color,
+    so without styling below, the text will just looks the same without background color */
+    -webkit-text-fill-color: transparent;
+    /* make the text color become transparent, so the text here finally shows the linear-gradient background color */
+}
