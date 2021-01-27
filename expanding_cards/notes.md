@@ -1,6 +1,6 @@
-##Notes:
+## Notes:
 
-###CSS
+### CSS
 1. Collapse animation can be realized by flex display and flex property
    
 
@@ -23,7 +23,7 @@
 7. The use of `@media`. For example, `@media(max-width: 480px) {}` 
    means that styles inside are only going to take effect if the screen is under 480 pixels
 
-###JavaScript
+### JavaScript
 1. `forEach` method can be used to operate on a collection of objects.
 
 2. The use of arrow function. 

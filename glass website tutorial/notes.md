@@ -1,10 +1,10 @@
-##Glass Website Practice
+## Glass Website Practice
 The source of this page is from the youtube video
 [Build Glass Website with HTML and CSS Tutorial](https://www.youtube.com/watch?v=O7WbVj5apxU&list=WL&index=9)
  of [Dev Ed](https://www.youtube.com/channel/UClb90NQQcskPUGDIXsQEz5Q)
 
 ----------------------------
-##Note of this course:
+## Note of this course:
 
 ### Having a general understanding of flex layout
 1. use `display: flex;` to activate the flex layout
