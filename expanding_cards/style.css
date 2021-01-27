@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container  {
+    display: flex;
+    width: 90vw;
+}
+
+.panel {
+    background-size: cover;
+    /* 	Resize the background image to cover the entire container, even if it has to stretch the image or cut a little bit off one of the edges */
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+    /* make mouse cursor become a little hand */
+
+    flex: 0.5;
+    /* use flex property to change the length of the panel */
+
+    margin: 10px;
+    position: relative;
+    /* it seems that to make a child object to be absolute position in its mother container,
+    the mother container's position property need to be "relative",
+    only after that the child object can be set as "position: absolute;" */
+
+    transition: flex 0.7s ease-in;
+    /* define the transition effect here */
+
+}
+
+.panel h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+   /* "opacity: 0;" makes the text 0% visibility, which will be changed when they are active */
+}
+
+.panel.active {
+    flex: 5;
+    /* change the size of active panel */
+    /* Just found that, in CSS there should NOT be any space between the two classes */
+}
+
+.panel.active h3{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media(max-width: 480px) {
+    .container {
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4), .panel:nth-of-type(5) {
+        display: none;
+    }
+    /* ".panel:nth-of-type(4") means the 4th panel class object,
+    similarly ".panel:nth-of-type(5)" means the 5th panel class object,
+    If the width is under 480px, the 4th and 5th panel will not be displayed  */
+
+
+    .panel:
+}
+/* The @media rule is used in media queries to apply different styles for different media types/devices. */
+/* "@media(max-width: 480px)" means any styles here are only going to take effect if the screen is under 480 pixels */
