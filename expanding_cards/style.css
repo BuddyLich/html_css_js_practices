@@ -63,6 +63,7 @@ body {
 .panel.active h3{
     opacity: 1;
     transition: opacity 0.3s ease-in 0.4s;
+    /* specifies a transition effect with a slow start */
 }
 
 @media(max-width: 480px) {
@@ -77,8 +78,6 @@ body {
     similarly ".panel:nth-of-type(5)" means the 5th panel class object,
     If the width is under 480px, the 4th and 5th panel will not be displayed  */
 
-
-    .panel:
 }
 /* The @media rule is used in media queries to apply different styles for different media types/devices. */
 /* "@media(max-width: 480px)" means any styles here are only going to take effect if the screen is under 480 pixels */

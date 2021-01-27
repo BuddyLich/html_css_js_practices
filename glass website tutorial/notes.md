@@ -8,14 +8,22 @@ The source of this page is from the youtube video
 
 ### Having a general understanding of flex layout
 1. use `display: flex;` to activate the flex layout
+   
+
 2. use `align-items: center;` and `justify-content: center;` to put object into center
    vertically and horizontally
+   
+
 3. use `justify-content: space-evenly;` to make elements inside flex container shares equal distance
    , including the distance to the border
+   
+
 4. `flex-direction: column;` makes objects placed vertically, 
+   
+
    and `flex-direction: row;` makes them placed horizontally
 5. `flex: 1;` or `flex: 2;` or `flex: 3;` decides how many spaces different objects shares
-6. 
+
 ### The use of linear-gradient
 e.g.
 
@@ -29,6 +37,12 @@ e.g.
     );
 ### Others
 1. 50% border radius can make square div into circle
+   
+
 2. `z-index: 2` decides which element is displayed at front
+   
+
 3. `align-items: center;` makes divs center but not text
+   
+
 4. `text-align: center;` makes the text center
