@@ -19,6 +19,6 @@ function blurring() {
     // when load equals to 0, opacity should equal to 1, and when load reach 100, opacity should equal to 0 
 
     let blurPx = (100 - load) * 0.3;
-    bg.style.filter = `blur(${blurPx}px)`;
+    bg.style.filter = `blur(${blurPx}px)`; 
     // similarly, calculate the blur pixels and change it
 };
