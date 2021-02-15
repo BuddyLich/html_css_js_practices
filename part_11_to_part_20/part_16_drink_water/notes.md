@@ -19,4 +19,7 @@ e.g.
 
 ### JavaScript:
 
-1. The use of `someDOMobject.nextElementSibling`
+1. The use of `someDOMobject.nextElementSibling`. It returns the next element, if this is the last one then return null. 
+There are similar method called previousElementSibling and firstElementSibling.
+
+Note: it doesn't work on array
