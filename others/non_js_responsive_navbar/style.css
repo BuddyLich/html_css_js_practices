@@ -81,7 +81,9 @@ nav {
     left: 0;
     background: var(--background);
     width: 100%;
-    display: none;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
 }
 
 nav ul {
@@ -100,6 +102,8 @@ nav a {
     text-decoration: none;
     font-size: 1.2rem;
     text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
 }
 
 nav a:hover {
@@ -110,5 +114,10 @@ nav a:hover {
    It's a bit like the + sign
 */
 .nav-toggle:checked ~ nav {
-    display: block;
+    transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
 }
